@@ -11,6 +11,7 @@ export default defineConfig({
         main: 'index.html',
         'lp-dores-cronicas': 'lp-dores-cronicas.html',
         'site-santa-isabel': 'site-santa-isabel.html',
+        'lp-santa-isabel': 'lp-santa-isabel.html',
       },
     },
   },
