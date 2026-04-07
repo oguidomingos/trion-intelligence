@@ -5,4 +5,12 @@ export default defineConfig({
   plugins: [react()],
   base: '/trion-intelligence/',
   assetsInclude: ['**/*.md'],
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        'lp-dores-cronicas': 'lp-dores-cronicas.html',
+      },
+    },
+  },
 })

@@ -1,0 +1,23 @@
+/* Landing Page overrides — reset dark body from index.css */
+body {
+  background-color: #ffffff;
+  color: #111827;
+}
+
+/* Scrollbar for LP */
+::-webkit-scrollbar-track {
+  background: #f9fafb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Safe area for sticky CTA on iPhone */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
