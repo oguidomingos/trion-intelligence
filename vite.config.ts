@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: 'index.html',
         'lp-dores-cronicas': 'lp-dores-cronicas.html',
+        'site-santa-isabel': 'site-santa-isabel.html',
       },
     },
   },
