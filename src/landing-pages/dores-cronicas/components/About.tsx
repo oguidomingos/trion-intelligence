@@ -1,5 +1,13 @@
+import { Shield, Award, Users, Clock } from "lucide-react";
 import { CONFIG } from "../config";
 import { WhatsAppButton } from "./WhatsAppButton";
+
+const FEATURES = [
+  { icon: Shield, title: "Equipe Certificada", description: "Profissionais com formação de excelência" },
+  { icon: Award, title: "Tecnologia Avançada", description: "Equipamentos de última geração" },
+  { icon: Users, title: "Atendimento Humanizado", description: "Cuidado integral e personalizado" },
+  { icon: Clock, title: "Agilidade", description: "Diagnóstico e tratamento sem demora" },
+];
 
 export function About() {
   return (
@@ -42,32 +50,80 @@ export function About() {
             </div>
           </div>
 
-          {/* Image placeholder */}
+          {/* Doctor profile card */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-[#1565c0]/10 to-[#e6b25d]/10 rounded-2xl aspect-[4/3] flex items-center justify-center border border-gray-100">
-              <div className="text-center px-8">
-                <div className="w-20 h-20 bg-[#1565c0]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg
-                    className="w-10 h-10 text-[#1565c0]"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth={1.5}
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z"
-                    />
-                  </svg>
+            <div className="bg-gradient-to-br from-[#1565c0] to-[#0a3470] rounded-2xl p-8 lg:p-10 shadow-xl relative overflow-hidden">
+              {/* Dot pattern overlay */}
+              <div
+                className="absolute inset-0 opacity-100"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1.5' cy='1.5' r='1' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E")`,
+                }}
+              />
+
+              {/* Gold top border accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#e6b25d] to-transparent" />
+
+              <div className="relative text-center">
+                {/* Initials circle */}
+                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#e6b25d] to-[#c48d2a] mx-auto mb-6 flex items-center justify-center shadow-lg">
+                  <span className="text-3xl font-bold text-white tracking-wider">LMD</span>
                 </div>
-                <p className="text-gray-500 text-sm">Foto da equipe da clínica</p>
-                <p className="text-gray-400 text-xs mt-1">Substitua por imagem real</p>
+
+                {/* Gold decorative line */}
+                <div className="w-12 h-0.5 bg-[#e6b25d] mx-auto mb-4" />
+
+                {/* Doctor name */}
+                <h3 className="text-2xl font-bold text-white mb-1">
+                  {CONFIG.doctorName}
+                </h3>
+
+                {/* Specialty */}
+                <p className="text-[#e6b25d] font-medium mb-4">
+                  Ortopedista | Medicina da Dor
+                </p>
+
+                {/* CRM/RQE */}
+                <div className="inline-flex flex-col sm:flex-row gap-2 sm:gap-4 text-white/60 text-sm">
+                  <span>{CONFIG.doctorCrm}</span>
+                  <span className="hidden sm:inline">•</span>
+                  <span>{CONFIG.doctorRqe}</span>
+                </div>
+
+                {/* Stats mini */}
+                <div className="mt-6 pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
+                  <div>
+                    <p className="text-2xl font-bold text-[#e6b25d]">{CONFIG.stats.procedures}</p>
+                    <p className="text-xs text-white/50 mt-1">Procedimentos</p>
+                  </div>
+                  <div>
+                    <p className="text-2xl font-bold text-[#e6b25d]">{CONFIG.stats.patients}</p>
+                    <p className="text-xs text-white/50 mt-1">Pacientes</p>
+                  </div>
+                </div>
               </div>
             </div>
+
             {/* Decorative accent */}
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#e6b25d]/20 rounded-2xl -z-10" />
+            <div className="absolute -top-4 -left-4 w-16 h-16 bg-[#1565c0]/20 rounded-2xl -z-10" />
           </div>
+        </div>
+
+        {/* Feature cards */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 mt-16">
+          {FEATURES.map(({ icon: Icon, title, description }) => (
+            <div
+              key={title}
+              className="bg-gray-50 rounded-xl p-5 text-center border border-gray-100 hover:shadow-md hover:border-[#e6b25d]/30 transition-all"
+            >
+              <div className="w-12 h-12 bg-[#1565c0]/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                <Icon className="w-6 h-6 text-[#1565c0]" />
+              </div>
+              <h4 className="font-bold text-gray-900 text-sm mb-1">{title}</h4>
+              <p className="text-xs text-gray-500">{description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

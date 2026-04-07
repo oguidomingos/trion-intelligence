@@ -1,6 +1,13 @@
 import { Bone, Dumbbell, Brain, CircleDot } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
 
+const BORDER_COLORS = [
+  "border-l-4 border-[#1565c0]",
+  "border-l-4 border-[#e6b25d]",
+  "border-l-4 border-[#0d47a1]",
+  "border-l-4 border-[#c48d2a]",
+];
+
 const CATEGORIES = [
   {
     icon: Bone,
@@ -66,10 +73,10 @@ export function Conditions() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-          {CATEGORIES.map(({ icon: Icon, title, conditions }) => (
+          {CATEGORIES.map(({ icon: Icon, title, conditions }, index) => (
             <div
               key={title}
-              className="bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+              className={`bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-md transition-shadow border border-gray-100 ${BORDER_COLORS[index]}`}
             >
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-12 h-12 bg-[#1565c0]/10 rounded-xl flex items-center justify-center">
