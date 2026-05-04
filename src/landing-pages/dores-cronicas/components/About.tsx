@@ -57,10 +57,18 @@ export function About() {
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#e6b25d] to-transparent" />
 
               <div className="relative text-center">
-                {/* Initials circle */}
-                <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#e6b25d] to-[#c48d2a] mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <span className="text-3xl font-bold text-white tracking-wider">RR</span>
-                </div>
+                {/* Doctor photo */}
+                {CONFIG.doctorImage ? (
+                  <img
+                    src={CONFIG.doctorImage}
+                    alt={CONFIG.doctorName}
+                    className="w-28 h-28 rounded-full object-cover mx-auto mb-6 shadow-lg border-4 border-[#e6b25d]"
+                  />
+                ) : (
+                  <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#e6b25d] to-[#c48d2a] mx-auto mb-6 flex items-center justify-center shadow-lg">
+                    <span className="text-3xl font-bold text-white tracking-wider">RR</span>
+                  </div>
+                )}
 
                 {/* Gold decorative line */}
                 <div className="w-12 h-0.5 bg-[#e6b25d] mx-auto mb-4" />
