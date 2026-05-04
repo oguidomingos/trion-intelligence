@@ -20,9 +20,11 @@ export const CONFIG = {
     patients: "8.000+",
     professionals: "15+",
   },
-  doctorCrm: "CRM/DF 00000",
-  doctorRqe: "RQE 0000",
-  doctorName: "Dr. Leandro Marques Dutra",
+  doctorCrm: "CRM/DF 12345",
+  doctorRqe: "RQE/DF 6789",
+  doctorName: "Dr. Rafael Rocha",
+  doctorSpecialties: "Médico da Dor e Ortopedista",
+  doctorBio: "Com mais de 15 anos de experiência em medicina da dor e ortopedia, o Dr. Rafael Rocha é reconhecido por sua abordagem humanizada e inovadora. Dedicado ao alívio do sofrimento dos pacientes, utiliza as mais avançadas técnicas de tratamento minimamente invasivo. Sua formação contínua e expertise em procedimentos regenerativos o posicionam como referência na região.",
   youtubeVideoId: "dQw4w9WgXcQ",
 } as const;
 

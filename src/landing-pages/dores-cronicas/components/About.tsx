@@ -24,24 +24,16 @@ export function About() {
 
             <div className="space-y-4 text-gray-600 leading-relaxed">
               <p>
-                A {CONFIG.clinicName} é referência no tratamento de dores crônicas em{" "}
-                {CONFIG.city}-{CONFIG.state}, reunindo uma equipe multidisciplinar de
-                especialistas dedicados ao cuidado integral do paciente.
+                {CONFIG.doctorBio}
               </p>
               <p>
-                Com infraestrutura moderna e tecnologia de ponta, oferecemos diagnósticos
-                precisos e tratamentos personalizados que priorizam o bem-estar e a
-                recuperação da qualidade de vida de cada paciente.
+                Sua prática clínica se destaca pela combinação de expertise técnica com genuína preocupação com o bem-estar do paciente. O Dr. Rafael entende que cada caso de dor crônica é único e demanda uma abordagem personalizada e cuidadosa.
               </p>
               <p>
-                Nossa abordagem combina medicina baseada em evidências com técnicas
-                minimamente invasivas, garantindo resultados eficazes com menor tempo de
-                recuperação e maior conforto durante todo o processo.
+                Nos consultórios onde trabalha, implementa protocolos de ponta em medicina regenerativa, bloqueios anestésicos ecoguiados e outros procedimentos minimamente invasivos que oferecem resultados efetivos com rápida recuperação.
               </p>
               <p>
-                Acreditamos que ninguém precisa conviver com a dor. Por isso, investimos
-                continuamente na capacitação de nossa equipe e na atualização de nossos
-                protocolos para oferecer o que há de mais avançado no tratamento da dor.
+                O diferencial do Dr. Rafael está em sua disposição genuína de ouvir cada paciente, entender suas preocupações e elaborar planos de tratamento que respeitem suas expectativas. Para ele, o sucesso não é apenas eliminar a dor, mas restituir a qualidade de vida e a funcionalidade.
               </p>
             </div>
 
@@ -67,7 +59,7 @@ export function About() {
               <div className="relative text-center">
                 {/* Initials circle */}
                 <div className="w-28 h-28 rounded-full bg-gradient-to-br from-[#e6b25d] to-[#c48d2a] mx-auto mb-6 flex items-center justify-center shadow-lg">
-                  <span className="text-3xl font-bold text-white tracking-wider">LMD</span>
+                  <span className="text-3xl font-bold text-white tracking-wider">RR</span>
                 </div>
 
                 {/* Gold decorative line */}
@@ -80,7 +72,7 @@ export function About() {
 
                 {/* Specialty */}
                 <p className="text-[#e6b25d] font-medium mb-4">
-                  Ortopedista | Medicina da Dor
+                  {CONFIG.doctorSpecialties}
                 </p>
 
                 {/* CRM/RQE */}
