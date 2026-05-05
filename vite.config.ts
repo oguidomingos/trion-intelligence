@@ -12,6 +12,7 @@ export default defineConfig({
         'lp-dores-cronicas': 'lp-dores-cronicas.html',
         'site-santa-isabel': 'site-santa-isabel.html',
         'lp-santa-isabel': 'lp-santa-isabel.html',
+        'miv-santa-isabel': 'miv-santa-isabel.html',
       },
     },
   },
