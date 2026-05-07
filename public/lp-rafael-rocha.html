@@ -100,7 +100,8 @@
   <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
 
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full">
-    <div class="max-w-3xl">
+    <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+     <div class="max-w-xl">
       <!-- Badge -->
       <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-3">
         <span class="w-2 h-2 bg-dourado rounded-full pulse-dot"></span>
@@ -142,6 +143,16 @@
         <svg class="w-4 h-4 text-dourado" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
         <span class="text-sm font-medium">Ortopedista formado pela UFG | Fellow em Dor pela UFG 2023–2025</span>
       </div>
+     </div>
+
+     <!-- IMG 9063 — Dr. Rafael realizando procedimento com sorriso -->
+     <div class="hidden lg:flex items-center justify-center">
+       <div class="relative">
+         <img src="img-9063-procedimento-sorriso.jpeg" alt="Dr. Rafael Rocha realizando procedimento" class="w-full max-w-md rounded-2xl shadow-2xl border-4 border-white/10 object-cover" />
+         <div class="absolute -bottom-3 -right-3 w-20 h-20 bg-dourado/30 rounded-2xl -z-10"></div>
+         <div class="absolute -top-3 -left-3 w-14 h-14 bg-white/10 rounded-2xl -z-10"></div>
+       </div>
+     </div>
     </div>
   </div>
 </section>
@@ -169,6 +180,20 @@
         <p class="text-3xl font-bold text-dourado">8+</p>
         <p class="text-sm text-white/70 mt-1">Anos de Especialização</p>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     VISUAL — Atendimento (IMG 9042)
+════════════════════════════════════════════════════ -->
+<section class="relative h-64 md:h-80 overflow-hidden">
+  <img src="img-9042-consulta.jpeg" alt="Dr. Rafael Rocha em atendimento" class="w-full h-full object-cover object-center" />
+  <div class="absolute inset-0 bg-gradient-to-r from-azul-dark/70 to-transparent flex items-center">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <p class="text-white text-2xl lg:text-3xl font-bold max-w-md">Atendimento humanizado com foco em resultados</p>
+      <p class="text-white/70 mt-2 max-w-sm">Cada paciente recebe atenção individualizada do diagnóstico ao tratamento</p>
     </div>
   </div>
 </section>
@@ -266,10 +291,16 @@
 ════════════════════════════════════════════════════ -->
 <section class="py-16 lg:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <span class="text-sm font-semibold text-dourado uppercase tracking-wider">Tratamentos</span>
-      <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2">Procedimentos Disponíveis</h2>
-      <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Técnicas avançadas e minimamente invasivas para o controle efetivo da dor</p>
+    <div class="grid lg:grid-cols-2 gap-10 items-center mb-12">
+      <div>
+        <span class="text-sm font-semibold text-dourado uppercase tracking-wider">Tratamentos</span>
+        <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-2">Procedimentos Disponíveis</h2>
+        <p class="text-gray-600 mt-3 max-w-xl">Técnicas avançadas e minimamente invasivas para o controle efetivo da dor</p>
+      </div>
+      <!-- IMG 1990 — Procedimento (outro ângulo) -->
+      <div class="hidden lg:block">
+        <img src="img-1990-procedimento-angulo.jpeg" alt="Dr. Rafael realizando procedimento minimamente invasivo" class="w-full h-56 object-cover rounded-2xl shadow-lg" />
+      </div>
     </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -469,55 +500,9 @@
         </div>
       </div>
 
-      <!-- Card do Médico -->
+      <!-- Foto do Dr. Rafael (IMG 9070) -->
       <div class="relative">
-        <div class="gradient-hero rounded-2xl p-8 lg:p-10 shadow-xl relative overflow-hidden">
-          <div class="dot-pattern absolute inset-0"></div>
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-dourado to-transparent"></div>
-
-          <div class="relative text-center">
-            <!-- Foto do Dr. Rafael (IMG 9070) -->
-            <img src="img-9070-sobre.png" alt="Dr. Rafael Rocha — Médico da Dor e Ortopedista" class="w-28 h-28 rounded-full object-cover mx-auto mb-6 shadow-lg border-4 border-dourado" />
-            <div class="w-12 h-0.5 bg-dourado mx-auto mb-4"></div>
-            <h3 class="text-2xl font-bold text-white mb-1">Dr. Rafael Rocha</h3>
-            <p class="text-dourado font-medium mb-1">Médico da Dor • Ortopedista</p>
-            <p class="text-white/60 text-sm mb-4">Fellow em Dor pela UFG (2023–2025)</p>
-
-            <div class="inline-flex flex-col sm:flex-row gap-2 sm:gap-4 text-white/60 text-sm">
-              <span>CRM/DF 31.365</span>
-              <span class="hidden sm:inline">•</span>
-              <span>RQE 22.589</span>
-            </div>
-
-            <!-- Mini Stats -->
-            <div class="mt-6 pt-6 border-t border-white/10 grid grid-cols-2 gap-4">
-              <div>
-                <p class="text-2xl font-bold text-dourado">+5.000</p>
-                <p class="text-xs text-white/50 mt-1">Procedimentos</p>
-              </div>
-              <div>
-                <p class="text-2xl font-bold text-dourado">+3.000</p>
-                <p class="text-xs text-white/50 mt-1">Pacientes</p>
-              </div>
-            </div>
-
-            <!-- Credenciais extras -->
-            <div class="mt-5 pt-5 border-t border-white/10 space-y-2">
-              <div class="flex items-center gap-2 justify-center text-sm text-white/70">
-                <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Residência em Ortopedia — HC/UFG
-              </div>
-              <div class="flex items-center gap-2 justify-center text-sm text-white/70">
-                <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Membro Fundador SOBRAMID/GO
-              </div>
-              <div class="flex items-center gap-2 justify-center text-sm text-white/70">
-                <svg class="w-4 h-4 text-dourado flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                Publicações científicas internacionais
-              </div>
-            </div>
-          </div>
-        </div>
+        <img src="img-9070-sobre.png" alt="Dr. Rafael Rocha — Médico da Dor e Ortopedista" class="w-full rounded-2xl shadow-2xl object-cover" />
         <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-dourado/20 rounded-2xl -z-10"></div>
         <div class="absolute -top-4 -left-4 w-16 h-16 bg-azul/20 rounded-2xl -z-10"></div>
       </div>
@@ -570,13 +555,6 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- IMG 9070 — Dr. Rafael (retrato profissional) -->
-      <div class="relative group overflow-hidden rounded-xl shadow-lg card-hover">
-        <img src="img-9070-sobre.png" alt="Dr. Rafael Rocha — Especialista em Medicina da Dor" class="w-full h-64 object-cover" />
-        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end justify-start p-4">
-          <p class="text-white font-medium">Dr. Rafael Rocha</p>
-        </div>
-      </div>
       <!-- IMG 9063 — Procedimento com sorriso -->
       <div class="relative group overflow-hidden rounded-xl shadow-lg card-hover">
         <img src="img-9063-procedimento-sorriso.jpeg" alt="Dr. Rafael realizando procedimento — ultrassom guiado" class="w-full h-64 object-cover" />
