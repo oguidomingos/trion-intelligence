@@ -10,6 +10,8 @@ export default defineConfig({
       input: {
         main: 'index.html',
         'lp-dores-cronicas': 'lp-dores-cronicas.html',
+        'lp-rafael-rocha': 'lp-rafael-rocha.html',
+        'lp-rafael-rocha-v2': 'lp-rafael-rocha-v2.html',
         'site-santa-isabel': 'site-santa-isabel.html',
         'lp-santa-isabel': 'lp-santa-isabel.html',
         'miv-santa-isabel': 'miv-santa-isabel.html',
