@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Rafael Rocha — Médico da Dor | Ortopedista | Brasília-DF</title>
+  <meta name="description" content="Dr. Rafael Rocha, médico especialista em dor e ortopedista em Brasília-DF. Tratamento avançado e minimamente invasivo para dores crônicas. CRM/DF 31.365.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            midnight: '#1a1a2e',
+            navy: '#16213e',
+            deep: '#0f3460',
+            gold: '#c9a96e',
+            'gold-light': '#e8d5b5',
+            'warm-white': '#f5f0eb',
+            'warm-gray': '#a8a4a0',
+            'warm-bg': '#faf8f5',
+            whatsapp: '#25D366',
+          },
+          fontFamily: {
+            serif: ['Playfair Display', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    /* ── Liquid Glass Header ── */
+    .header-glass {
+      background: linear-gradient(135deg, rgba(26,26,46,0.92) 0%, rgba(22,33,62,0.88) 100%);
+      backdrop-filter: blur(20px) saturate(120%);
+      -webkit-backdrop-filter: blur(20px) saturate(120%);
+      transition: padding 0.4s cubic-bezier(0.22, 1, 0.36, 1), background 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .header-glass.scrolled {
+      background: linear-gradient(135deg, rgba(26,26,46,0.97) 0%, rgba(22,33,62,0.95) 100%);
+      padding-top: 0.5rem !important;
+      padding-bottom: 0.5rem !important;
+    }
+
+    /* ── Nav underline animation ── */
+    .nav-link {
+      position: relative;
+      color: #f5f0eb;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      transition: color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: #c9a96e;
+      transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .nav-link:hover { color: #c9a96e; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── Pill CTA ── */
+    .cta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.625rem 1.75rem;
+      border-radius: 50px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.875rem;
+      letter-spacing: 0.02em;
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .cta-pill-gold {
+      background: #c9a96e;
+      color: #1a1a2e;
+      border: 1px solid #c9a96e;
+    }
+
+    .cta-pill-gold:hover {
+      background: transparent;
+      color: #c9a96e;
+      transform: translateY(-2px);
+    }
+
+    .cta-pill-outline {
+      background: transparent;
+      color: #c9a96e;
+      border: 1px solid #c9a96e;
+    }
+
+    .cta-pill-outline:hover {
+      background: #c9a96e;
+      color: #1a1a2e;
+      transform: translateY(-2px);
+    }
+
+    .cta-pill-whatsapp {
+      background: #25D366;
+      color: #fff;
+      border: 1px solid #25D366;
+      font-weight: 600;
+    }
+
+    .cta-pill-whatsapp:hover {
+      background: #1fb855;
+      border-color: #1fb855;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(37, 211, 102, 0.25);
+    }
+
+    /* ── Morphing Blob ── */
+    .morph-blob {
+      position: absolute;
+      background: radial-gradient(ellipse at 30% 40%, rgba(201,169,110,0.08) 0%, rgba(15,52,96,0.12) 60%, transparent 80%);
+      animation: morphBlob 18s ease-in-out infinite;
+      z-index: 0;
+    }
+
+    @keyframes morphBlob {
+      0%   { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: rotate(0deg) scale(1); }
+      25%  { border-radius: 55% 45% 35% 65% / 58% 38% 62% 42%; transform: rotate(5deg) scale(1.03); }
+      50%  { border-radius: 38% 62% 55% 45% / 42% 60% 40% 58%; transform: rotate(-3deg) scale(0.98); }
+      75%  { border-radius: 62% 38% 42% 58% / 55% 42% 58% 45%; transform: rotate(4deg) scale(1.02); }
+      100% { border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%; transform: rotate(0deg) scale(1); }
+    }
+
+    /* ── Section Label ── */
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      font-weight: 600;
+      letter-spacing: 3.5px;
+      text-transform: uppercase;
+      color: #c9a96e;
+    }
+
+    .section-label-dark {
+      color: #e8d5b5;
+    }
+
+    /* ── Gold Line ── */
+    .gold-line {
+      width: 48px;
+      height: 1px;
+      background: #c9a96e;
+    }
+
+    .gold-line-long {
+      width: 80px;
+    }
+
+    /* ── Scroll Reveal ── */
+    .sr {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .sr.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sr-delay-1 { transition-delay: 0.1s; }
+    .sr-delay-2 { transition-delay: 0.2s; }
+    .sr-delay-3 { transition-delay: 0.3s; }
+    .sr-delay-4 { transition-delay: 0.4s; }
+    .sr-delay-5 { transition-delay: 0.5s; }
+
+    /* ── Credential Card ── */
+    .credential-card {
+      background: linear-gradient(135deg, rgba(26,26,46,0.6) 0%, rgba(22,33,62,0.4) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(201,169,110,0.15);
+    }
+
+    /* ── Badge ── */
+    .hero-badge {
+      border: 1px solid rgba(201,169,110,0.25);
+      background: rgba(201,169,110,0.04);
+      backdrop-filter: blur(8px);
+    }
+
+    /* ── Condition Card ── */
+    .condition-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.06);
+      box-shadow: inset 0 1px 0 rgba(201,169,110,0.08);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .condition-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.06), inset 0 1px 0 rgba(201,169,110,0.12);
+    }
+
+    /* ── Procedure Card ── */
+    .procedure-card {
+      position: relative;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .procedure-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 24px;
+      right: 24px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+      opacity: 0;
+      transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .procedure-card:hover { transform: translateY(-3px); }
+    .procedure-card:hover::before { opacity: 1; }
+
+    /* ── Testimonial Card ── */
+    .testimonial-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.05);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+    }
+
+    /* ── FAQ Accordion ── */
+    .faq-item { border-bottom: 1px solid rgba(0,0,0,0.06); }
+
+    .faq-trigger {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 0;
+      transition: color 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .faq-trigger:hover { color: #c9a96e; }
+
+    .faq-trigger svg {
+      flex-shrink: 0;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .faq-item.open .faq-trigger svg { transform: rotate(45deg); }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1), padding 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .faq-item.open .faq-content {
+      max-height: 400px;
+      padding-bottom: 1.5rem;
+    }
+
+    /* ── Subtle Dot Pattern ── */
+    .dot-pattern {
+      background-image: radial-gradient(rgba(201,169,110,0.07) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* ── Cross Pattern (very subtle) ── */
+    .cross-pattern::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,169,110,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,169,110,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+    }
+
+    /* ── Photo placeholder ── */
+    .photo-placeholder {
+      background: linear-gradient(135deg, #e8e4df 0%, #d4cfc8 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #a8a4a0;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Stats number ── */
+    .stat-number {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      color: #c9a96e;
+    }
+
+    /* ── Mobile Sticky CTA ── */
+    .mobile-sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 90;
+      background: linear-gradient(0deg, rgba(26,26,46,0.98) 60%, transparent);
+      padding: 1.5rem 1rem 1rem;
+      transform: translateY(100%);
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .mobile-sticky-cta.visible { transform: translateY(0); }
+
+    /* ── Star rating ── */
+    .star { color: #c9a96e; }
+
+    /* ── Gallery masonry-like ── */
+    .gallery-item {
+      overflow: hidden;
+    }
+
+    .gallery-item img,
+    .gallery-item .photo-placeholder {
+      transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .gallery-item:hover img,
+    .gallery-item:hover .photo-placeholder {
+      transform: scale(1.04);
+    }
+
+    /* ── Floating WhatsApp ── */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 80;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.35);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45);
+    }
+
+    @media (max-width: 767px) {
+      .whatsapp-float { bottom: 5rem; }
+    }
+
+    /* ── Responsive tweaks ── */
+    @media (max-width: 767px) {
+      .hero-grid { grid-template-columns: 1fr !important; }
+      .stats-grid { grid-template-columns: 1fr 1fr !important; gap: 2rem !important; }
+      .conditions-grid { grid-template-columns: 1fr !important; }
+      .procedures-grid { grid-template-columns: 1fr !important; }
+      .testimonials-grid { grid-template-columns: 1fr !important; }
+      .gallery-grid { grid-template-columns: 1fr 1fr !important; }
+      .about-grid { grid-template-columns: 1fr !important; }
+      .footer-grid { grid-template-columns: 1fr !important; text-align: center; }
+      .location-grid { grid-template-columns: 1fr !important; }
+    }
+
+    @media (min-width: 768px) {
+      .mobile-sticky-cta { display: none !important; }
+    }
+
+    /* ── Selection color ── */
+    ::selection {
+      background: rgba(201,169,110,0.2);
+      color: inherit;
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- HEADER                                             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <header id="mainHeader" class="header-glass fixed top-0 left-0 right-0 z-50 py-4">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full border border-gold/40 flex items-center justify-center">
+          <span class="font-serif text-gold text-sm font-semibold tracking-wide">RR</span>
+        </div>
+        <div class="hidden sm:block">
+          <span class="text-warm-white text-sm font-medium tracking-wide">Dr. Rafael Rocha</span>
+          <span class="block text-warm-gray text-[0.625rem] tracking-wider uppercase">Médico da Dor</span>
+        </div>
+      </a>
+
+      <!-- Nav (desktop) -->
+      <nav class="hidden lg:flex items-center gap-8">
+        <a href="#especialidades" class="nav-link">Especialidades</a>
+        <a href="#procedimentos" class="nav-link">Procedimentos</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#depoimentos" class="nav-link">Depoimentos</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-outline text-xs">
+          Agendar Consulta
+        </a>
+      </nav>
+
+      <!-- Mobile menu toggle -->
+      <button id="menuToggle" class="lg:hidden text-warm-white p-2" aria-label="Menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Nav -->
+    <div id="mobileNav" class="lg:hidden hidden px-5 pb-5 pt-3">
+      <nav class="flex flex-col gap-4">
+        <a href="#especialidades" class="nav-link text-sm">Especialidades</a>
+        <a href="#procedimentos" class="nav-link text-sm">Procedimentos</a>
+        <a href="#sobre" class="nav-link text-sm">Sobre</a>
+        <a href="#depoimentos" class="nav-link text-sm">Depoimentos</a>
+        <a href="#faq" class="nav-link text-sm">FAQ</a>
+        <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-gold text-xs mt-2 justify-center">
+          Agendar Consulta
+        </a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- HERO                                               -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="relative bg-midnight min-h-screen flex items-center overflow-hidden pt-24 pb-20 lg:pb-0">
+    <!-- Radial light -->
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 70% 60% at 25% 40%, rgba(15,52,96,0.3) 0%, transparent 70%);"></div>
+
+    <!-- Morphing blob -->
+    <div class="morph-blob w-[500px] h-[500px] lg:w-[650px] lg:h-[650px] top-1/2 right-[-5%] -translate-y-1/2 hidden md:block"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-5 w-full">
+      <div class="hero-grid grid gap-12 lg:gap-8 items-center" style="grid-template-columns: 1.15fr 0.85fr;">
+
+        <!-- Text Column -->
+        <div>
+          <div class="sr">
+            <span class="section-label section-label-dark">Médico da Dor &bull; Ortopedista</span>
+          </div>
+
+          <h1 class="mt-6 sr sr-delay-1">
+            <span class="font-serif text-warm-white font-normal block" style="font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.15;">Tratamento Especializado Para</span>
+            <span class="font-serif text-gold font-bold block mt-1" style="font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.1;">Dores Crônicas</span>
+          </h1>
+
+          <div class="gold-line mt-6 sr sr-delay-2"></div>
+
+          <p class="mt-6 text-warm-gray font-light leading-relaxed max-w-lg sr sr-delay-2" style="font-size: 0.9375rem;">
+            Abordagem humanizada e minimamente invasiva para devolver sua qualidade de vida. Combinamos ortopedia e medicina da dor com as técnicas mais avançadas do mercado.
+          </p>
+
+          <!-- Badges -->
+          <div class="flex flex-wrap gap-3 mt-8 sr sr-delay-3">
+            <div class="hero-badge rounded-full px-4 py-2 flex items-center gap-2.5">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <span class="text-warm-white text-xs font-light">Diagnóstico Preciso</span>
+            </div>
+            <div class="hero-badge rounded-full px-4 py-2 flex items-center gap-2.5">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span class="text-warm-white text-xs font-light">Alívio Duradouro</span>
+            </div>
+            <div class="hero-badge rounded-full px-4 py-2 flex items-center gap-2.5">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span class="text-warm-white text-xs font-light">Sem Cirurgia</span>
+            </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="flex flex-wrap items-center gap-4 mt-10 sr sr-delay-4">
+            <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-gold">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Agendar Pelo WhatsApp
+            </a>
+            <a href="#especialidades" class="cta-pill cta-pill-outline text-xs">
+              Conheça os Tratamentos
+            </a>
+          </div>
+        </div>
+
+        <!-- Decorative Column (desktop) -->
+        <div class="hidden lg:flex flex-col items-end gap-6 relative">
+          <!-- Floating credential card -->
+          <div class="credential-card rounded-2xl px-6 py-4 sr sr-delay-3">
+            <span class="text-warm-gray text-[0.625rem] uppercase tracking-widest block mb-1">Registro Profissional</span>
+            <span class="text-warm-white font-serif text-sm">CRM/DF 31.365</span>
+            <span class="text-gold mx-2 text-xs">|</span>
+            <span class="text-warm-white font-serif text-sm">RQE 22.589</span>
+          </div>
+
+          <!-- Photo placeholder -->
+          <div class="w-72 h-96 rounded-[2rem_0.5rem_2rem_0.5rem] overflow-hidden sr sr-delay-4">
+            <div class="photo-placeholder w-full h-full">
+              <div class="text-center px-4">
+                <svg class="mx-auto mb-2 opacity-30" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+                <span class="text-[0.65rem] uppercase tracking-widest opacity-50">img-9070-sobre.png</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating detail -->
+          <div class="credential-card rounded-xl px-5 py-3 sr sr-delay-5 absolute bottom-12 -left-8">
+            <div class="flex items-center gap-2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="text-warm-white text-xs">Brasília-DF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom fade -->
+    <div class="absolute bottom-0 left-0 right-0 h-24" style="background: linear-gradient(0deg, #1a1a2e 0%, transparent 100%);"></div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- STATS BAR                                          -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="bg-midnight relative py-16 lg:py-20">
+    <div class="gold-line gold-line-long mx-auto mb-12"></div>
+
+    <div class="max-w-5xl mx-auto px-5">
+      <div class="stats-grid grid grid-cols-4 gap-8 text-center">
+        <div class="sr">
+          <div class="stat-number text-3xl lg:text-4xl" data-count="5000" data-prefix="+">0</div>
+          <div class="text-warm-gray text-xs mt-2 font-light tracking-wide">Procedimentos</div>
+        </div>
+        <div class="sr sr-delay-1">
+          <div class="stat-number text-3xl lg:text-4xl" data-count="15" data-prefix="+">0</div>
+          <div class="text-warm-gray text-xs mt-2 font-light tracking-wide">Convênios</div>
+        </div>
+        <div class="sr sr-delay-2">
+          <div class="stat-number text-3xl lg:text-4xl" data-count="3000" data-prefix="+">0</div>
+          <div class="text-warm-gray text-xs mt-2 font-light tracking-wide">Pacientes</div>
+        </div>
+        <div class="sr sr-delay-3">
+          <div class="stat-number text-3xl lg:text-4xl" data-count="8" data-suffix="+">0</div>
+          <div class="text-warm-gray text-xs mt-2 font-light tracking-wide">Anos de Experiência</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- CONDITIONS TREATED                                 -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section id="especialidades" class="relative bg-warm-bg py-24 lg:py-32 cross-pattern">
+    <div class="relative z-10 max-w-6xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-label sr">ESPECIALIDADES</span>
+        <h2 class="font-serif text-midnight mt-4 sr sr-delay-1" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.2;">
+          <span class="font-normal">Condições que</span> <span class="font-bold">tratamos</span>
+        </h2>
+        <div class="gold-line mx-auto mt-5 sr sr-delay-2"></div>
+        <p class="text-warm-gray mt-5 text-sm font-light leading-relaxed sr sr-delay-2">
+          Abordagem integrada que combina ortopedia e medicina da dor para diagnóstico e tratamento das mais diversas condições dolorosas.
+        </p>
+      </div>
+
+      <div class="conditions-grid grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+        <!-- Osteoarticulares -->
+        <div class="condition-card rounded-lg p-7 lg:p-8 sr">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l2 2"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-midnight text-lg font-semibold">Osteoarticulares</h3>
+            </div>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Artrose (joelho, quadril, ombro)</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Artrite reumatoide</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Sacroileíte</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Dor facetária</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Síndrome de dor miofascial</li>
+          </ul>
+        </div>
+
+        <!-- Musculoesqueléticas -->
+        <div class="condition-card rounded-[0.25rem_1rem_0.25rem_1rem] p-7 lg:p-8 sr sr-delay-1">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-midnight text-lg font-semibold">Musculoesqueléticas</h3>
+            </div>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Tendinites e bursites</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Lombalgia crônica</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Cervicalgia</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Fibromialgia</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Epicondilite</li>
+          </ul>
+        </div>
+
+        <!-- Neuropáticas -->
+        <div class="condition-card rounded-[1rem_0.25rem_1rem_0.25rem] p-7 lg:p-8 sr sr-delay-2">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-midnight text-lg font-semibold">Neuropáticas</h3>
+            </div>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Enxaqueca crônica</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Hérnia de disco com dor irradiada</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Síndrome do túnel do carpo</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Neuralgia pós-herpética</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Dor neuropática periférica</li>
+          </ul>
+        </div>
+
+        <!-- Ósseas e Outras -->
+        <div class="condition-card rounded-lg p-7 lg:p-8 sr sr-delay-3">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-serif text-midnight text-lg font-semibold">Ósseas e Outras</h3>
+            </div>
+          </div>
+          <ul class="space-y-2.5">
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Fraturas por estresse</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Osteoporose com dor</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Fascite plantar</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Calcificações tendíneas</li>
+            <li class="flex items-start gap-2 text-sm text-gray-600 font-light"><span class="text-gold mt-0.5">&#8212;</span> Dor crônica pós-cirúrgica</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CTA after conditions -->
+      <div class="text-center mt-14 sr">
+        <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-whatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Tire Suas Dúvidas Pelo WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- PROCEDURES                                         -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section id="procedimentos" class="bg-white py-24 lg:py-32">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-label sr">PROCEDIMENTOS</span>
+        <h2 class="font-serif text-midnight mt-4 sr sr-delay-1" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.2;">
+          <span class="font-normal">Tratamentos que</span> <span class="font-bold">transformam vidas</span>
+        </h2>
+        <div class="gold-line mx-auto mt-5 sr sr-delay-2"></div>
+      </div>
+
+      <div class="procedures-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-7">
+
+        <!-- Procedure 1 -->
+        <div class="procedure-card bg-warm-bg rounded-lg p-7 sr">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-full border border-gold/25 flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+            </div>
+            <span class="text-gold text-[0.625rem] font-semibold tracking-widest uppercase">01</span>
+          </div>
+          <h3 class="font-serif text-midnight text-base font-semibold mb-3">Consulta Especializada</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">
+            Avaliação completa com anamnese detalhada, exame físico e elaboração do plano de tratamento personalizado para seu caso.
+          </p>
+        </div>
+
+        <!-- Procedure 2 -->
+        <div class="procedure-card bg-warm-bg rounded-[0.25rem_1rem_0.25rem_1rem] p-7 sr sr-delay-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-full border border-gold/25 flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 6v6l4 2"/></svg>
+            </div>
+            <span class="text-gold text-[0.625rem] font-semibold tracking-widest uppercase">02</span>
+          </div>
+          <h3 class="font-serif text-midnight text-base font-semibold mb-3">Bloqueios e Infiltrações</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">
+            Infiltrações miofasciais com anestésico, bloqueios para tendinites, bursites e enxaqueca. Alívio rápido e duradouro guiado por ultrassonografia.
+          </p>
+        </div>
+
+        <!-- Procedure 3 -->
+        <div class="procedure-card bg-warm-bg rounded-lg p-7 sr sr-delay-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-full border border-gold/25 flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <span class="text-gold text-[0.625rem] font-semibold tracking-widest uppercase">03</span>
+          </div>
+          <h3 class="font-serif text-midnight text-base font-semibold mb-3">Terapia por Ondas de Choque</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">
+            Ortotripsia com 5 sessões para tratamento de calcificações, fascite plantar, tendinites crônicas e estimulação da regeneração tecidual.
+          </p>
+        </div>
+
+        <!-- Procedure 4 -->
+        <div class="procedure-card bg-warm-bg rounded-[1rem_0.25rem_1rem_0.25rem] p-7 sr sr-delay-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-full border border-gold/25 flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>
+            </div>
+            <span class="text-gold text-[0.625rem] font-semibold tracking-widest uppercase">04</span>
+          </div>
+          <h3 class="font-serif text-midnight text-base font-semibold mb-3">Viscossuplementação</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">
+            Infiltração de ácido hialurônico guiada por ultrassom para artrose de joelho, quadril e ombro — restaurando a lubrificação e reduzindo a dor.
+          </p>
+        </div>
+
+        <!-- Procedure 5 -->
+        <div class="procedure-card bg-warm-bg rounded-lg p-7 sr sr-delay-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-full border border-gold/25 flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5.52 19c.64-2.2 1.84-3 3.22-3h6.52c1.38 0 2.58.8 3.22 3"/><circle cx="12" cy="10" r="3"/><circle cx="12" cy="12" r="10"/></svg>
+            </div>
+            <span class="text-gold text-[0.625rem] font-semibold tracking-widest uppercase">05</span>
+          </div>
+          <h3 class="font-serif text-midnight text-base font-semibold mb-3">Botox para Enxaqueca</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">
+            Aplicação de toxina botulínica como tratamento preventivo para enxaqueca crônica — reduzindo frequência e intensidade das crises por até 3 meses.
+          </p>
+        </div>
+
+        <!-- Procedure 6 -->
+        <div class="procedure-card bg-warm-bg rounded-[0.5rem] p-7 sr sr-delay-3">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-9 h-9 rounded-full border border-gold/25 flex items-center justify-center flex-shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <span class="text-gold text-[0.625rem] font-semibold tracking-widest uppercase">06</span>
+          </div>
+          <h3 class="font-serif text-midnight text-base font-semibold mb-3">Hidrodissecção Neural</h3>
+          <p class="text-gray-500 text-sm font-light leading-relaxed">
+            Técnica guiada por ultrassom para tratamento do túnel do carpo e compressões nervosas, restaurando a função sem cirurgia.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA after procedures -->
+      <div class="text-center mt-14 sr">
+        <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-whatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agende Seu Procedimento
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- ABOUT DR. RAFAEL                                   -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section id="sobre" class="relative bg-midnight py-24 lg:py-32 overflow-hidden">
+    <!-- Subtle radial light -->
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 50% 60% at 75% 50%, rgba(15,52,96,0.25) 0%, transparent 70%);"></div>
+
+    <div class="relative z-10 max-w-6xl mx-auto px-5">
+      <div class="about-grid grid gap-12 lg:gap-16 items-center" style="grid-template-columns: 0.85fr 1.15fr;">
+
+        <!-- Photo Column -->
+        <div class="sr">
+          <div class="relative">
+            <div class="w-full aspect-[3/4] rounded-[2rem_0.5rem_2rem_0.5rem] overflow-hidden gallery-item">
+              <div class="photo-placeholder w-full h-full">
+                <div class="text-center px-4">
+                  <svg class="mx-auto mb-2 opacity-30" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 10-16 0"/></svg>
+                  <span class="text-[0.65rem] uppercase tracking-widest opacity-50">img-9070-sobre.png</span>
+                </div>
+              </div>
+            </div>
+            <!-- Floating accent -->
+            <div class="absolute -bottom-4 -right-4 w-24 h-24 border border-gold/15 rounded-full"></div>
+            <div class="absolute -top-4 -left-4 w-16 h-16 border border-gold/10 rounded-full"></div>
+          </div>
+        </div>
+
+        <!-- Text Column -->
+        <div>
+          <span class="section-label section-label-dark sr">SOBRE O MÉDICO</span>
+          <h2 class="font-serif text-warm-white mt-4 sr sr-delay-1" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.2;">
+            <span class="font-normal">Dr. Rafael</span> <span class="font-bold text-gold">Rocha</span>
+          </h2>
+          <div class="gold-line mt-5 sr sr-delay-1"></div>
+
+          <div class="mt-7 space-y-4 sr sr-delay-2">
+            <p class="text-warm-gray text-sm font-light leading-relaxed">
+              O Dr. Rafael Rocha é médico especialista em dor e ortopedista formado pela Universidade Federal de Goiás. Com mais de sete anos dedicados ao alívio da dor crônica, ele combina técnicas avançadas com uma abordagem genuinamente humanizada.
+            </p>
+            <p class="text-warm-gray text-sm font-light leading-relaxed">
+              Sua formação inclui residência em Ortopedia e Traumatologia pelo Hospital das Clínicas da UFG, seguida de especialização intensiva em Dor pela mesma instituição entre 2023 e 2025. Essa trajetória o coloca entre os especialistas em dor mais atualizados do Distrito Federal e o credencia como membro fundador da Associação Goiana dos Médicos de Dor.
+            </p>
+            <p class="text-warm-gray text-sm font-light leading-relaxed">
+              No consultório, o Dr. Rafael privilegia soluções que preservam a qualidade de vida. Sua expertise abrange tanto o diagnóstico musculoesquelético da ortopedia quanto as técnicas interventivas da medicina da dor, oferecendo planos de tratamento completos com foco em resultados minimamente invasivos.
+            </p>
+            <p class="text-warm-gray text-sm font-light leading-relaxed">
+              Pesquisador ativo, publicou artigos em periódicos internacionais e contribui com conhecimento científico sobre medicina esportiva. Seu compromisso vai além do consultório: é educar pacientes e promover medicina baseada em evidências, onde cada decisão terapêutica favorece o bem-estar duradouro.
+            </p>
+          </div>
+
+          <!-- Credentials -->
+          <div class="flex flex-wrap gap-3 mt-8 sr sr-delay-3">
+            <div class="hero-badge rounded-full px-4 py-2">
+              <span class="text-gold-light text-xs font-light">Formado pela UFG</span>
+            </div>
+            <div class="hero-badge rounded-full px-4 py-2">
+              <span class="text-gold-light text-xs font-light">Fellow em Dor 2023-2025</span>
+            </div>
+            <div class="hero-badge rounded-full px-4 py-2">
+              <span class="text-gold-light text-xs font-light">Membro Fundador SOBRAMID/GO</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- GALLERY                                            -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="bg-warm-bg py-24 lg:py-28">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <span class="section-label sr">GALERIA</span>
+        <h2 class="font-serif text-midnight mt-4 sr sr-delay-1" style="font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.2;">
+          <span class="font-normal">Nosso</span> <span class="font-bold">consultório</span>
+        </h2>
+        <div class="gold-line mx-auto mt-5 sr sr-delay-2"></div>
+      </div>
+
+      <div class="gallery-grid grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="gallery-item rounded-[1rem_0.25rem_1rem_0.25rem] overflow-hidden aspect-[4/5] sr">
+          <div class="photo-placeholder w-full h-full">
+            <span class="text-[0.6rem] uppercase tracking-widest opacity-50 px-3 text-center">img-9070-sobre.png</span>
+          </div>
+        </div>
+        <div class="gallery-item rounded-lg overflow-hidden aspect-[4/5] sr sr-delay-1">
+          <div class="photo-placeholder w-full h-full">
+            <span class="text-[0.6rem] uppercase tracking-widest opacity-50 px-3 text-center">img-9063-procedimento-sorriso.jpeg</span>
+          </div>
+        </div>
+        <div class="gallery-item rounded-[0.25rem_1rem_0.25rem_1rem] overflow-hidden aspect-[4/5] sr sr-delay-2">
+          <div class="photo-placeholder w-full h-full">
+            <span class="text-[0.6rem] uppercase tracking-widest opacity-50 px-3 text-center">img-9042-consulta.jpeg</span>
+          </div>
+        </div>
+        <div class="gallery-item rounded-lg overflow-hidden aspect-[4/5] sr sr-delay-3">
+          <div class="photo-placeholder w-full h-full">
+            <span class="text-[0.6rem] uppercase tracking-widest opacity-50 px-3 text-center">img-1990-procedimento-angulo.jpeg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- TESTIMONIALS                                       -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section id="depoimentos" class="bg-white py-24 lg:py-32">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <span class="section-label sr">DEPOIMENTOS</span>
+        <h2 class="font-serif text-midnight mt-4 sr sr-delay-1" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.2;">
+          <span class="font-normal">O que dizem nossos</span> <span class="font-bold">pacientes</span>
+        </h2>
+        <div class="gold-line mx-auto mt-5 sr sr-delay-2"></div>
+
+        <!-- Google Reviews Badge -->
+        <div class="inline-flex items-center gap-3 mt-8 bg-warm-bg border border-gray-100 rounded-full px-6 py-3 sr sr-delay-2">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 01-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <div class="flex items-center gap-1">
+            <span class="star text-sm">&#9733;</span>
+            <span class="star text-sm">&#9733;</span>
+            <span class="star text-sm">&#9733;</span>
+            <span class="star text-sm">&#9733;</span>
+            <span class="star text-sm">&#9733;</span>
+          </div>
+          <div>
+            <span class="text-midnight text-sm font-semibold">4.9</span>
+            <span class="text-warm-gray text-xs font-light ml-1">+200 avaliações verificadas</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-grid grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-7">
+
+        <!-- Testimonial 1 (Google Review screenshot placeholder) -->
+        <div class="testimonial-card rounded-lg overflow-hidden sr">
+          <div class="photo-placeholder aspect-[4/3]">
+            <div class="text-center px-6">
+              <div class="flex justify-center gap-0.5 mb-3">
+                <span class="star text-lg">&#9733;</span>
+                <span class="star text-lg">&#9733;</span>
+                <span class="star text-lg">&#9733;</span>
+                <span class="star text-lg">&#9733;</span>
+                <span class="star text-lg">&#9733;</span>
+              </div>
+              <span class="text-[0.65rem] uppercase tracking-widest opacity-50">Print Google Review #1</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 (Google Review screenshot placeholder) -->
+        <div class="testimonial-card rounded-[0.25rem_1rem_0.25rem_1rem] overflow-hidden sr sr-delay-1">
+          <div class="photo-placeholder aspect-[4/3]">
+            <div class="text-center px-6">
+              <div class="flex justify-center gap-0.5 mb-3">
+                <span class="star text-lg">&#9733;</span>
+                <span class="star text-lg">&#9733;</span>
+                <span class="star text-lg">&#9733;</span>
+                <span class="star text-lg">&#9733;</span>
+                <span class="star text-lg">&#9733;</span>
+              </div>
+              <span class="text-[0.65rem] uppercase tracking-widest opacity-50">Print Google Review #2</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 (YouTube video placeholder) -->
+        <div class="testimonial-card rounded-lg overflow-hidden sr sr-delay-2">
+          <div class="photo-placeholder aspect-[4/3] relative">
+            <div class="text-center px-6">
+              <svg class="mx-auto mb-3 opacity-40" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span class="text-[0.65rem] uppercase tracking-widest opacity-50">Vídeo Depoimento YouTube</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- LOCATION                                           -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="bg-warm-bg py-24 lg:py-28 dot-pattern">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <span class="section-label sr">LOCALIZAÇÃO</span>
+        <h2 class="font-serif text-midnight mt-4 sr sr-delay-1" style="font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.2;">
+          <span class="font-normal">Onde</span> <span class="font-bold">nos encontrar</span>
+        </h2>
+        <div class="gold-line mx-auto mt-5 sr sr-delay-2"></div>
+      </div>
+
+      <div class="location-grid grid gap-8 items-start" style="grid-template-columns: 1.15fr 0.85fr;">
+
+        <!-- Map placeholder -->
+        <div class="sr">
+          <div class="photo-placeholder w-full aspect-[16/9] rounded-lg">
+            <div class="text-center px-6">
+              <svg class="mx-auto mb-2 opacity-30" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="text-[0.65rem] uppercase tracking-widest opacity-50">Google Maps Embed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Info -->
+        <div class="sr sr-delay-1">
+          <div class="space-y-6">
+            <div>
+              <h3 class="font-serif text-midnight text-lg font-semibold mb-2">Endereço</h3>
+              <p class="text-gray-500 text-sm font-light leading-relaxed">
+                Brasília-DF<br>
+                <span class="text-warm-gray text-xs">(Endereço completo a confirmar)</span>
+              </p>
+            </div>
+
+            <div class="w-full h-px bg-gray-100"></div>
+
+            <div>
+              <h3 class="font-serif text-midnight text-lg font-semibold mb-2">Horário de Atendimento</h3>
+              <div class="space-y-1.5">
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-500 font-light">Segunda a Sexta</span>
+                  <span class="text-midnight font-medium">8h — 18h</span>
+                </div>
+                <div class="flex justify-between text-sm">
+                  <span class="text-gray-500 font-light">Sábados</span>
+                  <span class="text-midnight font-medium">Mediante agendamento</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="w-full h-px bg-gray-100"></div>
+
+            <div>
+              <h3 class="font-serif text-midnight text-lg font-semibold mb-3">Contato</h3>
+              <a href="tel:+5561999999999" class="flex items-center gap-2 text-sm text-gray-500 font-light mb-2 hover:text-gold transition-colors duration-300">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                (61) 99999-9999
+              </a>
+            </div>
+
+            <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-whatsapp inline-flex mt-2">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Agende Pelo WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- FAQ                                                -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section id="faq" class="bg-white py-24 lg:py-32">
+    <div class="max-w-3xl mx-auto px-5">
+      <div class="text-center mb-14">
+        <span class="section-label sr">DÚVIDAS FREQUENTES</span>
+        <h2 class="font-serif text-midnight mt-4 sr sr-delay-1" style="font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.2;">
+          <span class="font-normal">Perguntas</span> <span class="font-bold">frequentes</span>
+        </h2>
+        <div class="gold-line mx-auto mt-5 sr sr-delay-2"></div>
+      </div>
+
+      <div class="sr sr-delay-1">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <div class="faq-trigger" role="button" tabindex="0">
+            <span class="font-serif text-midnight text-base font-medium pr-4">Preciso de encaminhamento médico para consultar?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-content">
+            <p class="text-gray-500 text-sm font-light leading-relaxed pb-1">
+              Não é necessário encaminhamento para agendar sua consulta particular com o Dr. Rafael Rocha. Basta entrar em contato pelo WhatsApp e nossa equipe agenda rapidamente. Para consultas via convênio, verifique as exigências da sua operadora.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-trigger" role="button" tabindex="0">
+            <span class="font-serif text-midnight text-base font-medium pr-4">Quais convênios são aceitos?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-content">
+            <p class="text-gray-500 text-sm font-light leading-relaxed pb-1">
+              O Dr. Rafael Rocha atende pelos principais convênios do Distrito Federal. Entre em contato pelo WhatsApp com o nome do seu plano de saúde para confirmarmos a cobertura e disponibilidade para o seu procedimento.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-trigger" role="button" tabindex="0">
+            <span class="font-serif text-midnight text-base font-medium pr-4">Por que buscar um médico especialista em dor?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-content">
+            <p class="text-gray-500 text-sm font-light leading-relaxed pb-1">
+              A medicina da dor é uma especialidade dedicada ao diagnóstico e tratamento de condições dolorosas crônicas que muitas vezes não respondem bem a tratamentos convencionais. O Dr. Rafael Rocha combina sua formação em ortopedia com o expertise em medicina da dor, oferecendo opções terapêuticas avançadas e minimamente invasivas que evitam ou postergam cirurgias.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item" style="border-bottom: none;">
+          <div class="faq-trigger" role="button" tabindex="0">
+            <span class="font-serif text-midnight text-base font-medium pr-4">Como agendar minha consulta?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </div>
+          <div class="faq-content">
+            <p class="text-gray-500 text-sm font-light leading-relaxed pb-1">
+              O agendamento é feito diretamente pelo WhatsApp — basta clicar em qualquer botão verde desta página. Nossa equipe responde rapidamente e agenda no horário mais conveniente para você. Todo o processo é simples, sem burocracia e sem formulários.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA after FAQ -->
+      <div class="text-center mt-12 sr">
+        <p class="text-warm-gray text-sm font-light mb-5">Ainda tem dúvidas? Fale diretamente conosco.</p>
+        <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-whatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Fale Conosco no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- FINAL CTA BANNER                                   -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <section class="relative bg-midnight py-20 lg:py-24 overflow-hidden">
+    <div class="absolute inset-0" style="background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(15,52,96,0.35) 0%, transparent 70%);"></div>
+    <div class="morph-blob w-[400px] h-[400px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style="animation-delay: -5s;"></div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-5 text-center">
+      <span class="section-label section-label-dark sr">AGENDE SUA CONSULTA</span>
+      <h2 class="font-serif text-warm-white mt-4 sr sr-delay-1" style="font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.2;">
+        <span class="font-normal">Dê o primeiro passo para uma</span><br>
+        <span class="font-bold text-gold">vida sem dor</span>
+      </h2>
+      <div class="gold-line mx-auto mt-6 sr sr-delay-2"></div>
+      <p class="text-warm-gray text-sm font-light leading-relaxed mt-6 max-w-lg mx-auto sr sr-delay-2">
+        Atendimento humanizado e especializado. Clique abaixo e fale diretamente com nossa equipe pelo WhatsApp.
+      </p>
+      <div class="mt-10 sr sr-delay-3">
+        <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-whatsapp text-base px-8 py-3.5">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Agendar Consulta Agora
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- FOOTER                                             -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <footer class="bg-navy py-16 lg:py-20">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="footer-grid grid grid-cols-3 gap-10 lg:gap-16">
+
+        <!-- Col 1: Logo -->
+        <div>
+          <div class="flex items-center gap-3 mb-5 justify-start">
+            <div class="w-10 h-10 rounded-full border border-gold/30 flex items-center justify-center">
+              <span class="font-serif text-gold text-sm font-semibold tracking-wide">RR</span>
+            </div>
+            <div>
+              <span class="text-warm-white text-sm font-medium">Dr. Rafael Rocha</span>
+            </div>
+          </div>
+          <p class="text-warm-gray text-xs font-light leading-relaxed">
+            Médico especialista em dor e ortopedista. Tratamento humanizado e minimamente invasivo para dores crônicas em Brasília-DF.
+          </p>
+          <div class="mt-5">
+            <span class="text-warm-gray text-[0.625rem] tracking-wider">CRM/DF 31.365 | RQE 22.589</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Especialidades -->
+        <div>
+          <h4 class="text-gold-light text-xs font-semibold tracking-widest uppercase mb-5">Especialidades</h4>
+          <ul class="space-y-2.5">
+            <li class="text-warm-gray text-xs font-light">Bloqueios e Infiltrações</li>
+            <li class="text-warm-gray text-xs font-light">Viscossuplementação</li>
+            <li class="text-warm-gray text-xs font-light">Ondas de Choque</li>
+            <li class="text-warm-gray text-xs font-light">Botox para Enxaqueca</li>
+            <li class="text-warm-gray text-xs font-light">Hidrodissecção Neural</li>
+            <li class="text-warm-gray text-xs font-light">Consulta Especializada</li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contato -->
+        <div>
+          <h4 class="text-gold-light text-xs font-semibold tracking-widest uppercase mb-5">Contato</h4>
+          <ul class="space-y-3">
+            <li>
+              <a href="tel:+5561999999999" class="flex items-center gap-2 text-warm-gray text-xs font-light hover:text-gold transition-colors duration-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                (61) 99999-9999
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="flex items-center gap-2 text-warm-gray text-xs font-light hover:text-whatsapp transition-colors duration-300">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp
+              </a>
+            </li>
+            <li class="flex items-start gap-2 text-warm-gray text-xs font-light">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" class="mt-0.5 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Brasília-DF
+            </li>
+            <li class="flex items-start gap-2 text-warm-gray text-xs font-light">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c9a96e" stroke-width="1.5" stroke-linecap="round" class="mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Seg-Sex 8h-18h
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="mt-14 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-warm-gray text-[0.625rem] font-light tracking-wide">
+          &copy; 2025 Dr. Rafael Vieira Rocha. CRM/DF 31.365 | RQE 22.589. Todos os direitos reservados.
+        </p>
+        <p class="text-warm-gray text-[0.625rem] font-light tracking-wide opacity-50">
+          Desenvolvido por Trion Intelligence
+        </p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- FLOATING WHATSAPP BUTTON                           -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="whatsapp-float hidden md:flex" aria-label="WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- MOBILE STICKY CTA                                  -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <div class="mobile-sticky-cta md:hidden" id="mobileStickyBar">
+    <a href="https://wa.me/5561999999999?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Rafael%20Rocha." target="_blank" rel="noopener" class="cta-pill cta-pill-whatsapp w-full justify-center py-3.5 text-sm">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Agende Agora
+    </a>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- JAVASCRIPT                                         -->
+  <!-- ═══════════════════════════════════════════════════ -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ── Header scroll effect ──
+      var header = document.getElementById('mainHeader');
+      var lastScrollY = 0;
+
+      function handleHeaderScroll() {
+        var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollY > 60) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+        lastScrollY = scrollY;
+      }
+
+      window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+
+      // ── Mobile menu toggle ──
+      var menuToggle = document.getElementById('menuToggle');
+      var mobileNav = document.getElementById('mobileNav');
+
+      menuToggle.addEventListener('click', function() {
+        mobileNav.classList.toggle('hidden');
+      });
+
+      // Close mobile nav on link click
+      var mobileNavLinks = mobileNav.querySelectorAll('a');
+      mobileNavLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+          mobileNav.classList.add('hidden');
+        });
+      });
+
+      // ── Scroll Reveal (IntersectionObserver) ──
+      var srElements = document.querySelectorAll('.sr');
+
+      if ('IntersectionObserver' in window) {
+        var srObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              srObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        srElements.forEach(function(el) {
+          srObserver.observe(el);
+        });
+      } else {
+        // Fallback: show everything
+        srElements.forEach(function(el) {
+          el.classList.add('visible');
+        });
+      }
+
+      // ── CountUp animation for stats ──
+      var statNumbers = document.querySelectorAll('.stat-number[data-count]');
+
+      function animateCount(el) {
+        var target = parseInt(el.getAttribute('data-count'), 10);
+        var prefix = el.getAttribute('data-prefix') || '';
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 2000;
+        var startTime = null;
+
+        function formatNumber(n) {
+          if (n >= 1000) {
+            return n.toLocaleString('pt-BR');
+          }
+          return n.toString();
+        }
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          // Ease out cubic
+          var eased = 1 - Math.pow(1 - progress, 3);
+          var current = Math.floor(eased * target);
+          el.textContent = prefix + formatNumber(current) + suffix;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            el.textContent = prefix + formatNumber(target) + suffix;
+          }
+        }
+
+        requestAnimationFrame(step);
+      }
+
+      if ('IntersectionObserver' in window) {
+        var countObserver = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              animateCount(entry.target);
+              countObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.5
+        });
+
+        statNumbers.forEach(function(el) {
+          countObserver.observe(el);
+        });
+      } else {
+        statNumbers.forEach(function(el) {
+          var target = parseInt(el.getAttribute('data-count'), 10);
+          var prefix = el.getAttribute('data-prefix') || '';
+          var suffix = el.getAttribute('data-suffix') || '';
+          el.textContent = prefix + target.toLocaleString('pt-BR') + suffix;
+        });
+      }
+
+      // ── FAQ Accordion ──
+      var faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(function(item) {
+        var trigger = item.querySelector('.faq-trigger');
+
+        trigger.addEventListener('click', function() {
+          var wasOpen = item.classList.contains('open');
+
+          // Close all
+          faqItems.forEach(function(i) {
+            i.classList.remove('open');
+          });
+
+          // Toggle current
+          if (!wasOpen) {
+            item.classList.add('open');
+          }
+        });
+
+        trigger.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            trigger.click();
+          }
+        });
+      });
+
+      // ── Mobile Sticky CTA ──
+      var mobileStickyBar = document.getElementById('mobileStickyBar');
+
+      if (mobileStickyBar) {
+        var stickyObserverTarget = document.querySelector('#especialidades');
+
+        if ('IntersectionObserver' in window && stickyObserverTarget) {
+          // Show after hero + stats
+          window.addEventListener('scroll', function() {
+            var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollY > 600) {
+              mobileStickyBar.classList.add('visible');
+            } else {
+              mobileStickyBar.classList.remove('visible');
+            }
+          }, { passive: true });
+        }
+      }
+
+      // ── Smooth scroll for anchor links ──
+      document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+          var targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          var targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            var headerHeight = header.offsetHeight || 70;
+            var targetPosition = targetEl.getBoundingClientRect().top + window.pageYOffset - headerHeight - 20;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+    })();
+  </script>
+
+</body>
+</html>
